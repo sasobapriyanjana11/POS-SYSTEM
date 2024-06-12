@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,8 +7,7 @@
 }
 
 /* header */
-
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,57 +18,91 @@ header{
     z-index: 1;
 }
 
-header .sectionName{
+header .sectionName {
     color: white;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
-    gap: 0vw;
+    gap: 1vw;
 }
 
-header ul li{
+header ul li {
     background-color: #ffffff;
     font-size: 0.8rem;
     cursor: pointer;
     font-weight: 400;
     padding: 10px 20px;
     border: 1px solid #014e1b;
-    transition:0.1s ease-in;
+    transition: 0.1s ease-in;
 }
 
-header ul li:hover{
-  transform: scale(1.1);
-  font-weight: 400;
-  background-color: #09998d;
-  
+header ul li:hover {
+    transform: scale(1.1);
+    font-weight: 400;
+    background-color: #09998d;
 }
 
-header ul li a{
+header ul li a {
     color: #0a2c01;
     transition: 0.1s ease-in;
 }
 
-header ul li a:hover{
+header ul li a:hover {
     color: #ffffff;
 }
 
-section > div{
+/* burger button */
+
+.burger-menu {
+    display: none; /* Initially hide on larger screens */
+
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Rotate animation when clicked */
+.change .bar:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+
+/* Sections */
+section > div {
     display: grid;
     grid-template-columns: 35% 65%;
     font-size: 18px;
     padding: 1vw;
 }
 
-section > :first-child > div{
+section > :first-child > div {
     margin-top: 12vh;
 }
 
-.title{
+.title {
     font-size: 2rem;
     font-weight: 500;
     margin-left: 4rem;
@@ -78,145 +110,133 @@ section > :first-child > div{
     margin-top: 2rem;
 }
 
-form div{
+form div {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-top: 34px;
 }
 
-
-form div input ,select{
+form div input, select {
     padding: 10px;
-    border: 1px solid #c4c4c4;
+    border: 1px solid rgb(194, 238, 234);
+    background-color: rgb(192, 241, 217);
     border-radius: 5px;
 }
 
-.buttons{
+.buttons {
     flex-direction: row;
     font-size: 18px !important;
-    gap: 0;
+    gap: 10px;
 }
 
-.buttons button{
+.buttons button {
     padding: 13px 19px;
     border: 1px solid #c4c4c4;
     border-radius: 3px;
     cursor: pointer;
-   
- 
 }
 
-/*save button */
-.buttons > :first-child{
+.buttons > :first-child {
     background-color: #033058;
     color: white;
 }
 
-/*remove button */
-.buttons > :nth-child(2){
+.buttons > :nth-child(2) {
     background-color: #df1321;
 }
 
-/*update button */
-.buttons > :nth-child(3){
+.buttons > :nth-child(3) {
     background-color: #0aa82c;
 }
 
-/*getall button */
-.buttons > :nth-child(4){
+.buttons > :nth-child(4) {
     background-color: #0e9db6;
 }
 
-/*clear button */
-.buttons > :last-child{
+.buttons > :last-child {
     background-color: #7e8d8c;
 }
 
-#CustomerManage table , #ItemManage table{
+#CustomerManage table, #ItemManage table {
     margin-left: 50px;
     margin-top: 3rem;
 }
 
-#CustomerManage th , #CustomerManage td , #ItemManage th , #ItemManage td{
+#CustomerManage th, #CustomerManage td, #ItemManage th, #ItemManage td {
     border: 1px solid #c4c4c4;
     width: 20vw;
     height: 4vw;
     text-align: center;
 }
-#cusTale  h1{
-    margin-top: 2rem;
-}
-#CustomerManage th , #ItemManage th{
+
+#CustomerManage th, #ItemManage th {
     background-color: #26772a;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
-section{
+section {
     display: none;
 }
 
-.includeDetails{
+.includeDetails {
     border: 1px solid #000000;
     padding: 20px;
 }
-
-/* order */
 
 #OrderManage > div {
     display: flex;
     justify-content: space-around;
 }
-#OrderManage > #orderDetail{
+
+#OrderManage > #orderDetail {
     display: grid;
-    grid-template-columns: repeat(1 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
-#OrderManage > :first-child > div{
+#OrderManage > :first-child > div {
     margin-top: 12vh;
 }
 
-#OrderManage h1{
+#OrderManage h1 {
     font-size: 1.5rem;
     font-weight: 500;
     background-color: #24A746;
     padding: 10px 20px;
 }
 
-#OrderManage .includeDetails form div > div ,
-#OrderManage .includeDetails form > :last-child{
+#OrderManage .includeDetails form div > div, #OrderManage .includeDetails form > :last-child {
     margin-top: 0;
     margin: 10px 15px;
 }
 
-#OrderManage .includeDetails form > :first-child{
+#OrderManage .includeDetails form > :first-child {
     display: grid;
-    grid-template-columns: repeat(1 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
-#OrderManage .ItemSelect form > :first-child{
+#OrderManage .ItemSelect form > :first-child {
     display: grid;
-    grid-template-columns: repeat(1 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
-#OrderManage .ItemSelect form div > div ,
- #OrderManage .ItemSelect form > :last-child{
+#OrderManage .ItemSelect form div > div, #OrderManage .ItemSelect form > :last-child {
     margin-top: 0;
     margin: 10px 15px;
 }
 
-#OrderManage .ItemSelect form > :nth-child(2){
+#OrderManage .ItemSelect form > :nth-child(2) {
     display: grid;
     grid-template-columns: 40% 39% 20%;
     margin: 0;
 }
 
-.ItemSelect > :last-child{
+.ItemSelect > :last-child {
     display: flex;
     justify-content: end;
 }
 
-.ItemSelect button{
+.ItemSelect button {
     padding: 10px 20px;
     border: 1px solid #c4c4c4;
     border-radius: 3px;
@@ -228,17 +248,16 @@ section{
     transition: 0.2s ease-in;
 }
 
-.ItemSelect button:hover{
+.ItemSelect button:hover {
     background-color: #db02d0;
-    /* transform: scale(1.1); */
 }
 
-.ItemSelect{
+.ItemSelect {
     border: 1px solid #000000;
     padding: 20px;
 }
 
-#OrderManage .TotalCal h1 , .TotalCal h2{
+#OrderManage .TotalCal h1, .TotalCal h2 {
     background-color: transparent;
     padding: 0;
     font-size: 30px;
@@ -251,53 +270,52 @@ section{
     padding: 20px;
 }
 
-.TotalCal h2{
+.TotalCal h2 {
     color: #ee0a11;
 }
 
-.TotalCal form > :first-child{
+.TotalCal form > :first-child {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.TotalCal > :last-child{
+.TotalCal > :last-child {
     display: flex;
     justify-content: center;
 }
 
-.TotalCal button{
+.TotalCal button {
     padding: 10px 20px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
     cursor: pointer;
     background-color: #09998d;
-    color: rgb(17, 2, 2);
+    color: #110202;
     margin-top: 50px;
-    transition:0.5s ease-in;
+    transition: 0.5s ease-in;
 }
-.TotalCal button:hover{
+
+.TotalCal button:hover {
     background-color: #014e1b;
-    color: rgb(252, 251, 251);
+    color: #fcfbfb;
     transform: scale(1.1);
 }
 
-
-
-.tableRow{
-   height: auto;
+.tableRow {
+    height: auto;
 }
 
-.table > div , .tableRows > div{
+.table > div, .tableRows > div {
     display: flex;
 }
 
-.table , .tableRows{
+.table, .tableRows {
     display: flex;
     flex-direction: column;
     padding: 0 5.7vw;
 }
 
-.table > div > div , .tableRows > div > div{
+.table > div > div, .tableRows > div > div {
     width: 18vw;
     height: 4vw;
     border: 1px solid #c4c4c4;
@@ -305,25 +323,25 @@ section{
     justify-content: center;
     align-items: center;
 }
-.tableRows > div > div{
+
+.tableRows > div > div {
     width: 20vw;
 }
 
-#OrderManage > :last-child{
+#OrderManage > :last-child {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     max-height: 34vh;
 }
 
-h5{
+h5 {
     font-size: 15px;
     color: #ff0808;
     font-weight: 400;
     position: absolute;
     margin-top: 7.8vh;
 }
-
 
 /* carousel */
 .carousel {
@@ -365,7 +383,7 @@ h5{
 }
 
 .carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-control.prev {
@@ -376,7 +394,7 @@ h5{
     right: 10px;
 }
 
-#homePage > div{
+#homePage > div {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -386,6 +404,104 @@ h5{
     padding: 0;
 }
 
-table{
+table {
     border-collapse: collapse;
+}
+
+
+
+
+/* Responsive  */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        display: none;
+        gap: 10px;
+    }
+
+    header ul li {
+        font-size: 0.7rem;
+        padding: 8px 15px;
+    }
+
+
+    section > div {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+
+
+    #CustomerManage table,
+    #ItemManage table {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 3rem;
+        overflow-x: auto;
+    }
+
+    #OrderManage table {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 3rem;
+        overflow-x: auto;
+    }
+
+    #CustomerManage th,
+    #CustomerManage td,
+    #ItemManage th,
+    #ItemManage td,
+    #OrderManage th,
+    #OrderManage td {
+        min-width: auto;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .carousel-control.prev {
+        left: 5px;
+    }
+
+    .carousel-control.next {
+        right: 5px;
+    }
+
+    #homePage > div img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-control.prev,
+        .carousel-control.next {
+            font-size: 1.5em;
+            padding: 5px;
+        }
+
+        .carousel-inner {
+            gap: 0.5rem;
+        }
+
+        .table > div > div,
+        .tableRows > div > div {
+            width: auto;
+            padding: 5px;
+        }
+
+        #CustomerManage table,
+        #ItemManage table,
+        #OrderManage table {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .burger-menu {
+            display: block;
+        }
 }

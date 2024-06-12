@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assests/css/a.css">
-    <!-- <link rel="stylesheet" href="/assests/css/Style.css"> -->
+    
+    <link rel="stylesheet" href="/assests/css/Style.css">
     <title>POS SYSTEM</title>
 <body>
     <header>
@@ -41,8 +41,11 @@
                     <div class="carousel-item">
                         <img src="/assests/images/carosel3.webp" alt="Image 3">
                     </div>
+                    <div class="carousel-item">
+                        <img src="/assests/images/carosel4.webp" alt="Image 4">
+                    </div>
                 </div>
-                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control prev" onclick="previousSlide()">&#10094;</button>
                 <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
             </div>
         </div>
@@ -79,11 +82,11 @@
                     </div>
     
                     <div class="buttons">
-                        <button type="submit" class="saveBtn">Save Customer</button>
+                        <button type="submit" class="saveBtn">+Save</button>
                         <button class="removeBtn">Remove</button>
                         <button class="updateBtn">Update</button>
                         <button class="searchBtn">GetAll</button>
-                        <button class="cleatBtn">Clear All</button>
+                        <button class="cleatBtn">Clear</button>
                     </div>
                 </form>
             </div>
@@ -138,11 +141,11 @@
                     </div>
     
                     <div class="buttons">
-                        <button type="submit" class="saveBtn">Save Item</button>
+                        <button type="submit" class="saveBtn">+Save</button>
                         <button class="deleteBtn">Remove</button>
                         <button class="updateBtn">Update</button>
                         <button class="searchBtn">GetAll</button>
-                        <button class="clearBtn">Clear All</button>
+                        <button class="clearBtn">Clear</button>
                     </div>
                 </form>
             </div>
@@ -347,7 +350,7 @@ $(document).ready(function(){
 
 
     let currentSlide = 0;
-    const slideInterval = 3000; 
+    const slideInterval = 2000; 
     let autoSlide;
 
     function showSlide(index) {
@@ -374,7 +377,7 @@ $(document).ready(function(){
         showSlide(currentSlide + 1);
     }
 
-    function prevSlide() {
+    function previousSlide() {
         showSlide(currentSlide - 1);
     }
 
@@ -392,7 +395,7 @@ $(document).ready(function(){
     $('.carousel').mouseenter(stopAutoSlide).mouseleave(startAutoSlide);
 
     $('.prev').click(function() {
-        prevSlide();
+        previousSlide();
     });
 
     $('.next').click(function() {
